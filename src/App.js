@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+/* Frameworks */
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+/* Components */
+import { Footer } from "./components/Footer";
+import { MobileForm } from "./components/Form/MobileForm";
+import { PCForm } from "./components/Form/PCForm";
+/* import { Header } from "./components/Header"; */
+import './css/Style2.css'
 
 function App() {
+    alert("Bienvenido, este formulario tiene finalidad de informar al agente comercial para realizar el respectivo agendamiento para tu equipo o servicio que estas interesado")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PCForm/>
+      <MobileForm/>
+      <Footer/>
+    </>
   );
 }
 
