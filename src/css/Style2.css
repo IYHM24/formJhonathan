@@ -3,3 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+.product {
+	z-index: 2;
+	position: fixed;
+	top: 85%;
+	left: 80%;
+	width: 70px;
+	height: 70px;
+}

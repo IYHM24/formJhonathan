@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Form from './Form';
 import { Notify } from '../Notify';
 import Swal from 'sweetalert2'
+import { Modal } from '../Modal';
+
 
 export const PCForm = () => {
 
@@ -52,9 +54,11 @@ export const PCForm = () => {
 
 
     return (
-        <form className="mt-5 shadow container p-5 d-flex flex-column d-none d-lg-block w-25" onSubmit={useWhatsapp}>
-            <Notify />
-            <Form handeInputChange={handeInputChange} />
-        </form>
+        <>
+            <form className="mt-5 shadow container p-5 d-flex flex-column d-none d-lg-block w-25" onSubmit={useWhatsapp}>
+                <Notify />
+                <Form handeInputChange={handeInputChange} />
+            </form>
+        </>
     )
 }

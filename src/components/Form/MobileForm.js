@@ -2,28 +2,29 @@ import React from 'react'
 import { useState } from 'react';
 import Form from './Form';
 import Swal from 'sweetalert2'
+import { Modal } from '../Modal';
 /* import { useWhatsapp } from '../../Hooks/useWhatsapp' */
 
 export const MobileForm = () => {
 
-    
+
     const [Handle, setHandle] = useState({
         name: "",
-        email: "", 
+        email: "",
         cel: "",
         product: "",
     })
 
 
-    const handeInputChange = (e) =>{
+    const handeInputChange = (e) => {
         console.log(e.target.id);
         setHandle({
             ...Handle,
-            [e.target.id] : e.target.value,
+            [e.target.id]: e.target.value,
         })
     }
 
-    const useWhatsapp = (e) =>{
+    const useWhatsapp = (e) => {
         e.preventDefault();
         console.log(Handle);
         MSJ();
@@ -50,8 +51,10 @@ export const MobileForm = () => {
     }
 
     return (
-        <form className="container p-5 d-flex flex-column d-lg-none d-xl-none" onSubmit={useWhatsapp}>
-            <Form handeInputChange = {handeInputChange}/>
-        </form>
+        <>
+            <form className="container p-5 d-flex flex-column d-lg-none d-xl-none" onSubmit={useWhatsapp}>
+                <Form handeInputChange={handeInputChange} />
+            </form>
+        </>
     )
 }
